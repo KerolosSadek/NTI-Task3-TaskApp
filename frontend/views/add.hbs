@@ -1,0 +1,24 @@
+{{>header}}
+{{>nav}}
+<form class="container" action="/getAddLogic">
+
+    <div class="my-3">
+        <label for="exampleInputName1" class="form-label">Name OF The Task</label>
+        <input name="name" type="text" class="form-control" id="exampleInputName">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputtitle" class="form-label">Title Of The Task</label>
+        <input name="title" type="text" class="form-control" id="exampleInputtitle">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputcontent" class="form-label">Content Of The Task</label>
+        <input name="content" type="text" class="form-control" id="exampleInputtitle">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputStatus" class="form-label">Status</label>
+        <input name="status" type="text" class="form-control" id="exampleInputtitle">
+        <label for="">Please Enter Active Or inActive Only!!</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{>footer}}

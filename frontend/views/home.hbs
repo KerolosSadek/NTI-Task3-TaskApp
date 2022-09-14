@@ -1,0 +1,44 @@
+{{>header}}
+{{>nav}}
+<section class="container">
+    {{#if noTasks}}
+    <div class="alert alert-danger">
+        NO Tasks
+    </div>
+    {{else}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">title</th>
+                    <th scope="col">content</th>
+                    <th scope="col">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each allTasks}}
+                    <tr>
+                        <th scope="row">{{this.id}}</th>
+                        <td>{{this.name}}</td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.content}}</td>
+                        {{#if this.status}}
+                            <td class="bg-success">{{this.status}}</td>
+                        {{else}}
+                            <td class="bg-danger">{{this.status}}</td>
+                        {{/if}}
+                        
+                        <td>
+                            <a href="/single/{{this.id}}" class="mx-2 btn btn-primary">Show</a>
+                            <a href="/edit/{{this.id}}" class="mx-2 btn btn-warning">Edit</a>
+                            <a href="/delete/{{this.id}}" class="mx-2 btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+
+</section>
+{{>footer}}

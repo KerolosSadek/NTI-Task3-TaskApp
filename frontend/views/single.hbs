@@ -1,0 +1,34 @@
+{{>header}}
+{{>nav}}
+<section class="container">
+    {{#if task}}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">title</th>
+                    <th scope="col">content</th>
+                    <th scope="col">status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>{{task.id}}</th>
+                    <td>{{task.name}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.content}}</td>
+                    <td>{{task.status}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    {{else}}
+        <div class="alert alert-danger">
+            No Task Found
+        </div>
+    {{/if}}
+
+</section>
+{{>footer}}
+{{>footer}}

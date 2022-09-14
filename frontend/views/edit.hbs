@@ -1,0 +1,27 @@
+{{>header}}
+{{>nav}}
+<form class="container" method="post">
+    <div class="my-3">
+        <label for="exampleInputId" class="form-label">ID OF The Task</label>
+        <input name="id" disabled type="text" value="{{task.id}}" class="form-control" id="exampleInputId">
+    </div>
+    <div class="my-3">
+        <label for="exampleInputName1" class="form-label">Name OF The Task</label>
+        <input name="name" type="text" value="{{task.name}}" class="form-control" id="exampleInputName">
+    </div>
+    <div class="my-3">
+        <label for="exampleInputtitle" class="form-label">Title Of The Task</label>
+        <input name="title" type="text" value="{{task.title}}" class="form-control" id="exampleInputtitle">
+    </div>
+    <div class="my-3">
+        <label for="exampleInputcontent" class="form-label">Content Of The Task</label>
+        <input name="content" type="text" value="{{task.content}}" class="form-control" id="exampleInputtitle">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputStatus" class="form-label">Status</label>
+        <input name="status" type="text" value="{{task.status}}" class="form-control" id="exampleInputtitle">
+        <label for="">Please Enter Active Or inActive Only!!</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit Task</button>
+</form>
+{{>footer}}
